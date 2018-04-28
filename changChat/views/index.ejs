@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="banner">
+        <h1>畅聊室</h1>
+        <span id="status"></span>
+      </div>
+      <div id="historyMsg">
+      </div>
+      <div class="controls" >
+        <div class="items">
+          <input id="colorStyle" type="color" placeHolder='#000' title="字体颜色" />
+          <input id="emoji" type="button" value="表情" title="表情" />
+          <label for="sendImage" class="imageLable">
+            <input type="button" value="图片"  />
+            <input id="sendImage" type="file" value="image"/>
+          </label>
+          <input id="clearBtn" type="button" value="清屏" title="清屏" />
+        </div>
+        <textarea id="messageInput" placeHolder=""></textarea>
+        <input id="sendBtn" type="button" value="发送">
+        <div id="emojiWrapper">
+        </div>
+      </div>
+    </div>
+    <div id="loginWrapper">
+      <p id="info">等待链接服务器...</p>
+      <div id="nickWrapper">
+        <input type="text" placeHolder="请输入你的昵称" id="nicknameInput" />
+        <input type="button" value="确认" id="loginBtn" />
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/hichat.js"></script>
+  </body>
+</html>
